@@ -1,6 +1,11 @@
 #include "../wifi_deauther_app_i.h"
 
 void wifi_deauther_console_output_handle_rx_data_cb(uint8_t* buf, size_t len, void* context) {
+    if(!context) {
+        FURI_LOG_E(TAG, "Context NULL!!!");
+        return;
+    }
+
     furi_assert(context);
     WifideautherApp* app = context;
 
@@ -14,6 +19,7 @@ void wifi_deauther_console_output_handle_rx_data_cb(uint8_t* buf, size_t len, vo
     // Null-terminate buf and append to text box store
     buf[len] = '\0';
     furi_string_cat_printf(app->text_box_store, "%s", buf);
+    FURI_LOG_T(TAG, "%s", buf);
 
     view_dispatcher_send_custom_event(app->view_dispatcher, WifideautherEventRefreshConsoleOutput);
 }
