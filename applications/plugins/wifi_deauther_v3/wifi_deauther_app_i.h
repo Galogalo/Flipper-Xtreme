@@ -14,6 +14,8 @@
 
 #define NUM_MENU_ITEMS (12)
 
+#define TAG "WifiDeautherV3"
+
 #define WIFI_deauther_TEXT_BOX_STORE_SIZE (4096)
 #define WIFI_deauther_TEXT_INPUT_STORE_SIZE (512)
 
