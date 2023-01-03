@@ -64,6 +64,7 @@ static int32_t uart_worker(void* context) {
 
 void wifi_deauther_uart_tx(uint8_t* data, size_t len) {
     furi_hal_uart_tx(UART_CH, data, len);
+    FURI_LOG_T(TAG, "SERIAL TX:%s", data);
 }
 
 WifideautherUart* wifi_deauther_uart_init(WifideautherApp* app) {
