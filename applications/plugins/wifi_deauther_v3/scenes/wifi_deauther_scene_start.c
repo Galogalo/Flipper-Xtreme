@@ -41,7 +41,7 @@ const WifideautherItem MenuItems[NUM_MENU_ITEMS] = {
      INPUT_ARGS,
      FOCUS_CONSOLE_END,
      NO_TIP},
-    {"beacon", {"Fill name SSID"}, 1, {"beacon -ssid \"\""}, INPUT_ARGS, FOCUS_CONSOLE_END, NO_TIP},
+    {"beacon", {"Fill name SSID"}, 1, {"beacon -ssid "}, INPUT_ARGS, FOCUS_CONSOLE_END, NO_TIP},
     {"Settings",
      {"Get", "Remove AP", "Set SSID", "Set Pass", "Save"},
      5,
