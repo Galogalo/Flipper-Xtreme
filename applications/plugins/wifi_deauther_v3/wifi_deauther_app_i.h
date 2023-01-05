@@ -12,7 +12,7 @@
 #include <gui/modules/text_input.h>
 #include <gui/modules/variable_item_list.h>
 
-#define NUM_MENU_ITEMS (12)
+#define NUM_MENU_ITEMS (11)
 
 #define TAG "WifiDeautherV3"
 
