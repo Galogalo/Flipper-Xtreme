@@ -144,7 +144,7 @@ TextBox* text_box_alloc() {
         text_box->view,
         TextBoxModel * model,
         {
-            model->text = NULL;
+            model->text = "";
             model->text_formatted = furi_string_alloc_set("");
             model->formatted = false;
             model->font = TextBoxFontText;
@@ -175,7 +175,7 @@ void text_box_reset(TextBox* text_box) {
         text_box->view,
         TextBoxModel * model,
         {
-            model->text = NULL;
+            model->text = "";
             furi_string_set(model->text_formatted, "");
             model->font = TextBoxFontText;
             model->focus = TextBoxFocusStart;
